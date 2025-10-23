@@ -553,3 +553,69 @@ ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
 2025-10-23 23:54:09,563 - RAG_App - INFO - ChromaVectorStore loaded on initialization.
 2025-10-23 23:54:09,564 - RAG_App - INFO - Vector store loaded successfully.
 2025-10-23 23:54:09,564 - RAG_App - INFO - RAGEngine ready – provider=featherless-ai model=inclusionAI/Ling-1T
+2025-10-23 23:54:36,176 - RAG_App - INFO - Loading configuration...
+2025-10-23 23:54:36,176 - RAG_App - INFO - Configuration validated successfully.
+2025-10-23 23:54:36,962 - faiss.loader - INFO - Loading faiss with AVX512 support.
+2025-10-23 23:54:36,962 - faiss.loader - INFO - Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+2025-10-23 23:54:36,962 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2025-10-23 23:54:37,023 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2025-10-23 23:54:45,433 - datasets - INFO - TensorFlow version 2.20.0 available.
+2025-10-23 23:54:45,435 - datasets - INFO - JAX version 0.7.2 available.
+2025-10-23 23:54:48,212 - tensorflow - WARNING - From C:\Users\Wizard\AppData\Local\Programs\Python\Python311\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-10-23 23:56:06,641 - RAG_App - INFO - Initializing RAGEngine…
+2025-10-23 23:56:06,641 - RAG_App - INFO - Initializing ChromaVectorStore at ./chroma_db_store
+2025-10-23 23:56:06,667 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-10-23 23:56:06,743 - RAG_App - INFO - Loading embedding model: sentence-transformers/all-MiniLM-L6-v2
+2025-10-23 23:56:06,777 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda:0
+2025-10-23 23:56:06,777 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-10-23 23:56:12,038 - RAG_App - INFO - ChromaVectorStore loaded on initialization.
+2025-10-23 23:56:12,039 - RAG_App - INFO - Vector store loaded successfully.
+2025-10-23 23:56:12,039 - RAG_App - INFO - RAGEngine ready – provider=featherless-ai model=inclusionAI/Ling-1T
+2025-10-23 23:56:12,434 - tensorflow - WARNING - From C:\Users\Wizard\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\src\backend\common\global_state.py:82: The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
+2025-10-24 00:04:53,294 - RAG_App - INFO - Calling HF API (1 messages)…
+2025-10-24 00:05:36,173 - RAG_App - INFO - Calling HF API (3 messages)…
+2025-10-24 00:06:59,982 - RAG_App - INFO - Calling HF API (5 messages)…
+2025-10-24 00:07:25,644 - RAG_App - WARNING - Clearing vector store…
+2025-10-24 00:07:25,655 - RAG_App - ERROR - Chroma reset failed: Reset is disabled by config
+2025-10-24 00:07:25,656 - RAG_App - INFO - Initializing ChromaVectorStore at ./chroma_db_store
+2025-10-24 00:07:25,673 - RAG_App - INFO - ChromaVectorStore loaded on initialization.
+2025-10-24 00:07:25,673 - RAG_App - INFO - Vector store loaded successfully.
+2025-10-24 00:07:25,674 - RAG_App - INFO - Vector store cleared and re-initialised.
+2025-10-24 00:07:28,414 - RAG_App - WARNING - Clearing vector store…
+2025-10-24 00:07:28,424 - RAG_App - ERROR - Chroma reset failed: Reset is disabled by config
+2025-10-24 00:07:28,424 - RAG_App - INFO - Initializing ChromaVectorStore at ./chroma_db_store
+2025-10-24 00:07:28,447 - RAG_App - INFO - ChromaVectorStore loaded on initialization.
+2025-10-24 00:07:28,447 - RAG_App - INFO - Vector store loaded successfully.
+2025-10-24 00:07:28,447 - RAG_App - INFO - Vector store cleared and re-initialised.
+2025-10-24 00:07:33,867 - RAG_App - WARNING - Clearing vector store…
+2025-10-24 00:07:33,879 - RAG_App - ERROR - Chroma reset failed: Reset is disabled by config
+2025-10-24 00:07:33,879 - RAG_App - INFO - Initializing ChromaVectorStore at ./chroma_db_store
+2025-10-24 00:07:33,898 - RAG_App - INFO - ChromaVectorStore loaded on initialization.
+2025-10-24 00:07:33,898 - RAG_App - INFO - Vector store loaded successfully.
+2025-10-24 00:07:33,899 - RAG_App - INFO - Vector store cleared and re-initialised.
+2025-10-24 00:07:41,316 - RAG_App - WARNING - Clearing vector store…
+2025-10-24 00:07:41,329 - RAG_App - ERROR - Chroma reset failed: Reset is disabled by config
+2025-10-24 00:07:41,329 - RAG_App - INFO - Initializing ChromaVectorStore at ./chroma_db_store
+2025-10-24 00:07:41,351 - RAG_App - INFO - ChromaVectorStore loaded on initialization.
+2025-10-24 00:07:41,353 - RAG_App - INFO - Vector store loaded successfully.
+2025-10-24 00:07:41,353 - RAG_App - INFO - Vector store cleared and re-initialised.
+2025-10-24 00:07:44,213 - RAG_App - WARNING - Clearing vector store…
+2025-10-24 00:07:44,224 - RAG_App - ERROR - Chroma reset failed: Reset is disabled by config
+2025-10-24 00:07:44,224 - RAG_App - INFO - Initializing ChromaVectorStore at ./chroma_db_store
+2025-10-24 00:07:44,244 - RAG_App - INFO - ChromaVectorStore loaded on initialization.
+2025-10-24 00:07:44,245 - RAG_App - INFO - Vector store loaded successfully.
+2025-10-24 00:07:44,245 - RAG_App - INFO - Vector store cleared and re-initialised.
+2025-10-24 00:08:19,799 - RAG_App - INFO - Loading configuration...
+2025-10-24 00:08:19,799 - RAG_App - INFO - Configuration validated successfully.
+2025-10-24 00:08:20,855 - faiss.loader - INFO - Loading faiss with AVX512 support.
+2025-10-24 00:08:20,856 - faiss.loader - INFO - Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+2025-10-24 00:08:20,857 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2025-10-24 00:08:20,872 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2025-10-24 00:08:29,824 - tensorflow - WARNING - From C:\Users\Wizard\AppData\Local\Programs\Python\Python311\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-10-24 00:08:30,095 - datasets - INFO - TensorFlow version 2.20.0 available.
+2025-10-24 00:08:30,095 - datasets - INFO - JAX version 0.7.2 available.
