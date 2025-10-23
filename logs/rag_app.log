@@ -399,3 +399,123 @@ ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
 2025-10-23 13:17:35,097 - RAG_App - INFO - Starting KG extraction from 4 documents...
 2025-10-23 13:17:35,099 - RAG_App - INFO - Processing document 0/4 for KG...
 2025-10-23 13:17:35,609 - RAG_App - INFO - KG build complete. Nodes: 115, Edges: 1
+2025-10-23 21:47:58,773 - RAG_App - INFO - Loading configuration...
+2025-10-23 21:47:58,775 - RAG_App - INFO - Configuration validated successfully.
+2025-10-23 21:48:00,694 - faiss.loader - INFO - Loading faiss with AVX512 support.
+2025-10-23 21:48:00,695 - faiss.loader - INFO - Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+2025-10-23 21:48:00,695 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2025-10-23 21:48:00,857 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2025-10-23 21:48:34,132 - datasets - INFO - TensorFlow version 2.20.0 available.
+2025-10-23 21:48:34,134 - datasets - INFO - JAX version 0.7.2 available.
+2025-10-23 21:48:38,239 - tensorflow - WARNING - From c:\Users\Wizard\AppData\Local\Programs\Python\Python311\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-10-23 21:48:49,790 - RAG_App - INFO - Configuration is valid.
+2025-10-23 21:48:49,791 - RAG_App - INFO - Initializing RAGEngine...
+2025-10-23 21:48:49,792 - RAG_App - INFO - Initializing ChromaVectorStore at ./chroma_db_store
+2025-10-23 21:48:49,820 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-10-23 21:48:50,180 - RAG_App - INFO - Loading embedding model: sentence-transformers/all-MiniLM-L6-v2
+2025-10-23 21:48:50,199 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda:0
+2025-10-23 21:48:50,200 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-10-23 21:48:56,384 - RAG_App - INFO - ChromaVectorStore loaded on initialization.
+2025-10-23 21:48:56,385 - RAG_App - INFO - Vector store loaded successfully.
+2025-10-23 21:48:56,386 - RAG_App - INFO - RAGEngine initialized with provider featherless-ai and model inclusionAI/Ling-1T
+2025-10-23 21:49:10,018 - RAG_App - WARNING - Clearing vector store for a clean test…
+2025-10-23 21:49:10,018 - RAG_App - WARNING - Clearing vector store...
+2025-10-23 21:49:10,030 - RAG_App - ERROR - Error resetting chroma database: Reset is disabled by config
+2025-10-23 21:49:10,031 - RAG_App - INFO - Vector store cleared and re-initialized.
+2025-10-23 21:50:10,324 - RAG_App - INFO - DocumentProcessor initialized.
+2025-10-23 21:50:10,324 - RAG_App - INFO - Processing file: test_paris.txt
+2025-10-23 21:50:10,325 - RAG_App - INFO - Successfully processed test_paris.txt, created 1 chunks.
+2025-10-23 21:50:10,325 - RAG_App - INFO - Processing file: test_berlin.txt
+2025-10-23 21:50:10,326 - RAG_App - INFO - Successfully processed test_berlin.txt, created 1 chunks.
+2025-10-23 21:50:10,326 - RAG_App - INFO - Adding 2 documents to Chroma...
+2025-10-23 21:50:10,953 - RAG_App - INFO - Document addition to Chroma complete.
+2025-10-23 21:50:10,954 - RAG_App - INFO - ChromaVectorStore is persistent. No explicit save needed.
+2025-10-23 21:51:39,949 - RAG_App - INFO - Starting crawl 1/1 for root URL: https://en.wikipedia.org/wiki/Bread
+2025-10-23 21:51:39,950 - RAG_App - INFO - Crawling (Depth 0): https://en.wikipedia.org/wiki/Bread
+2025-10-23 21:51:42,484 - RAG_App - INFO - Crawling (Depth 1): https://en.wikipedia.org/wiki/American_Jewish_cuisine
+2025-10-23 21:51:43,246 - RAG_App - INFO - Crawl complete. Fetched 2 total pages.
+2025-10-23 21:51:43,246 - RAG_App - INFO - Adding 2 documents to Chroma...
+2025-10-23 21:51:43,288 - RAG_App - INFO - Document addition to Chroma complete.
+2025-10-23 21:51:43,289 - RAG_App - INFO - ChromaVectorStore is persistent. No explicit save needed.
+2025-10-23 23:18:41,023 - RAG_App - INFO - Generating LLM chat completion for 1 messages...
+2025-10-23 23:18:46,158 - RAG_App - INFO - LLM response received.
+2025-10-23 23:18:46,176 - RAG_App - INFO - Generating LLM chat completion for 1 messages...
+2025-10-23 23:18:49,717 - RAG_App - INFO - LLM response received.
+2025-10-23 23:18:57,453 - RAG_App - INFO - Generating LLM chat completion for 1 messages...
+2025-10-23 23:18:59,427 - RAG_App - INFO - LLM response received.
+2025-10-23 23:18:59,442 - RAG_App - INFO - Generating LLM chat completion for 3 messages...
+2025-10-23 23:19:01,767 - RAG_App - INFO - LLM response received.
+2025-10-23 23:19:01,782 - RAG_App - INFO - Generating LLM chat completion for 5 messages...
+2025-10-23 23:19:05,060 - RAG_App - INFO - LLM response received.
+2025-10-23 23:19:31,800 - RAG_App - INFO - Retrieving all documents for KG build...
+2025-10-23 23:19:31,812 - RAG_App - INFO - Starting KG extraction from 8 documents...
+2025-10-23 23:19:31,813 - RAG_App - INFO - Processing document 0/8 for KG...
+2025-10-23 23:19:33,218 - RAG_App - INFO - KG build complete. Nodes: 165, Edges: 1
+2025-10-23 23:35:55,672 - RAG_App - INFO - Loading configuration...
+2025-10-23 23:35:55,672 - RAG_App - INFO - Configuration validated successfully.
+2025-10-23 23:35:55,761 - faiss.loader - INFO - Loading faiss with AVX512 support.
+2025-10-23 23:35:55,762 - faiss.loader - INFO - Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+2025-10-23 23:35:55,762 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2025-10-23 23:35:55,811 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2025-10-23 23:36:05,905 - datasets - INFO - TensorFlow version 2.20.0 available.
+2025-10-23 23:36:05,908 - datasets - INFO - JAX version 0.7.2 available.
+2025-10-23 23:36:08,625 - tensorflow - WARNING - From C:\Users\Wizard\AppData\Local\Programs\Python\Python311\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-10-23 23:37:34,925 - RAG_App - INFO - Initializing RAGEngine...
+2025-10-23 23:37:34,925 - RAG_App - INFO - Initializing ChromaVectorStore at ./chroma_db_store
+2025-10-23 23:37:34,945 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-10-23 23:37:35,010 - RAG_App - INFO - Loading embedding model: sentence-transformers/all-MiniLM-L6-v2
+2025-10-23 23:37:35,031 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda:0
+2025-10-23 23:37:35,031 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-10-23 23:37:43,012 - RAG_App - INFO - ChromaVectorStore loaded on initialization.
+2025-10-23 23:37:43,012 - RAG_App - INFO - Vector store loaded successfully.
+2025-10-23 23:37:43,012 - RAG_App - INFO - RAGEngine initialized with provider featherless-ai and model inclusionAI/Ling-1T
+2025-10-23 23:37:43,388 - tensorflow - WARNING - From C:\Users\Wizard\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\src\backend\common\global_state.py:82: The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
+2025-10-23 23:38:05,721 - RAG_App - WARNING - Clearing vector store...
+2025-10-23 23:38:05,732 - RAG_App - ERROR - Error resetting chroma database: Reset is disabled by config
+2025-10-23 23:38:05,732 - RAG_App - INFO - Vector store cleared and re-initialized.
+2025-10-23 23:38:28,335 - RAG_App - INFO - Loading configuration...
+2025-10-23 23:38:28,335 - RAG_App - INFO - Configuration validated successfully.
+2025-10-23 23:38:28,417 - faiss.loader - INFO - Loading faiss with AVX512 support.
+2025-10-23 23:38:28,417 - faiss.loader - INFO - Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+2025-10-23 23:38:28,417 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2025-10-23 23:38:28,431 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2025-10-23 23:38:38,534 - tensorflow - WARNING - From C:\Users\Wizard\AppData\Local\Programs\Python\Python311\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-10-23 23:38:38,813 - datasets - INFO - TensorFlow version 2.20.0 available.
+2025-10-23 23:38:38,813 - datasets - INFO - JAX version 0.7.2 available.
+2025-10-23 23:38:41,104 - RAG_App - INFO - BG_TASK: Starting processing for 1 files.
+2025-10-23 23:38:41,104 - RAG_App - INFO - DocumentProcessor initialized.
+2025-10-23 23:38:41,104 - RAG_App - INFO - Processing file: pinn_kan.pdf
+2025-10-23 23:38:41,276 - RAG_App - INFO - Successfully processed pinn_kan.pdf, created 120 chunks.
+2025-10-23 23:38:41,276 - RAG_App - INFO - Initializing RAGEngine...
+2025-10-23 23:38:41,276 - RAG_App - INFO - Initializing ChromaVectorStore at ./chroma_db_store
+2025-10-23 23:38:41,298 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-10-23 23:38:41,356 - RAG_App - INFO - Loading embedding model: sentence-transformers/all-MiniLM-L6-v2
+2025-10-23 23:38:41,371 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda:0
+2025-10-23 23:38:41,371 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-10-23 23:38:47,236 - RAG_App - INFO - ChromaVectorStore loaded on initialization.
+2025-10-23 23:38:47,236 - RAG_App - INFO - Vector store loaded successfully.
+2025-10-23 23:38:47,236 - RAG_App - INFO - RAGEngine initialized with provider featherless-ai and model inclusionAI/Ling-1T
+2025-10-23 23:38:47,236 - RAG_App - INFO - Adding 120 documents to Chroma...
+2025-10-23 23:38:47,639 - RAG_App - INFO - Document addition to Chroma complete.
+2025-10-23 23:38:47,640 - RAG_App - INFO - ChromaVectorStore is persistent. No explicit save needed.
+2025-10-23 23:38:47,640 - RAG_App - INFO - BG_TASK: File processing complete. Added 120 chunks.
+2025-10-23 23:42:08,770 - RAG_App - INFO - Generating LLM chat completion for 1 messages...
+2025-10-23 23:42:13,334 - RAG_App - INFO - LLM response received.
+2025-10-23 23:42:36,444 - RAG_App - INFO - Generating LLM chat completion for 1 messages...
+2025-10-23 23:42:39,862 - RAG_App - INFO - LLM response received.
+2025-10-23 23:43:00,265 - RAG_App - INFO - BG_TASK: Starting Knowledge Graph build.
+2025-10-23 23:43:00,265 - RAG_App - INFO - Initializing RAGEngine...
+2025-10-23 23:43:00,265 - RAG_App - INFO - RAGEngine initialized with provider featherless-ai and model inclusionAI/Ling-1T
+2025-10-23 23:43:00,265 - RAG_App - INFO - Retrieving all documents for KG build...
+2025-10-23 23:43:00,282 - RAG_App - INFO - Starting KG extraction from 128 documents...
+2025-10-23 23:43:00,282 - RAG_App - INFO - Processing document 0/128 for KG...
+2025-10-23 23:43:01,964 - RAG_App - INFO - Processing document 100/128 for KG...
+2025-10-23 23:43:02,032 - RAG_App - INFO - KG build complete. Nodes: 434, Edges: 9
+2025-10-23 23:43:02,034 - RAG_App - INFO - BG_TASK: KG build complete. Found 434 nodes.
