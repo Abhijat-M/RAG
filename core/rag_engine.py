@@ -8,7 +8,7 @@ from huggingface_hub.errors import TextGenerationError
 import os
 import chromadb
 import shutil  # Keep shutil for FAISS
-import time
+
 
 class RAGEngine:
     """
