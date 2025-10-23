@@ -38,6 +38,13 @@ def show_web_crawler(crawl_urls_background_fn):
         
         st.markdown(f"### 🎯 Ready to Crawl {len(urls)} URL(s)")
         
+        add_to_kb = st.checkbox(
+            "✅ Add crawled content to Knowledge Base", 
+            value=True, 
+            key="add_to_vector_store_toggle",
+            help="If checked, the extracted text will be added to the vector store for RAG."
+        )
+        
         if st.button("🚀 Start Crawling", type="primary", key="start_crawl"):
             pool = st.session_state.process_pool
             future = pool.submit(
@@ -45,7 +52,8 @@ def show_web_crawler(crawl_urls_background_fn):
                 urls,
                 context,
                 max_pages,
-                max_depth
+                max_depth,
+                add_to_kb  # Pass the new option
             )
             st.session_state.jobs['crawling'] = future
             st.info("🕷️ Crawling websites in the background. This may take a while...")
@@ -57,14 +65,22 @@ def show_web_crawler(crawl_urls_background_fn):
             st.spinner("🕷️ Crawling websites in the background...")
         elif future.done():
             try:
-                pages_crawled = future.result()
+                pages_crawled, pages_added = future.result()  # Unpack both values
+                
+                # Create a dynamic message
+                if pages_added > 0:
+                    success_msg = f"Successfully crawled <strong>{pages_crawled}</strong> pages and added <strong>{pages_added}</strong> to the knowledge base."
+                    st.session_state.web_pages_crawled += pages_added # Only increment by what was added
+                else:
+                    success_msg = f"Successfully crawled <strong>{pages_crawled}</strong> pages. (Not added to knowledge base)"
+
                 st.markdown(f"""
                 <div class="success-message">
                     <h4>✅ Crawling Complete!</h4>
-                    <p>Successfully crawled <strong>{pages_crawled}</strong> new pages and added to knowledge base.</p>
+                    <p>{success_msg}</p>
                 </div>
                 """, unsafe_allow_html=True)
-                st.session_state.web_pages_crawled += pages_crawled
+                
                 del st.session_state.jobs['crawling']
             except Exception as e:
                 logger.error(f"Crawling job failed: {e}")

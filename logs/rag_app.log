@@ -522,3 +522,34 @@ ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
 2025-10-23 23:48:46,179 - RAG_App - WARNING - Clearing vector store...
 2025-10-23 23:48:46,192 - RAG_App - ERROR - Error resetting chroma database: Reset is disabled by config
 2025-10-23 23:48:46,192 - RAG_App - INFO - Vector store cleared and re-initialized.
+2025-10-23 23:53:23,249 - RAG_App - INFO - Loading configuration...
+2025-10-23 23:53:23,250 - RAG_App - INFO - Configuration validated successfully.
+2025-10-23 23:53:24,201 - faiss.loader - INFO - Loading faiss with AVX512 support.
+2025-10-23 23:53:24,201 - faiss.loader - INFO - Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+2025-10-23 23:53:24,201 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2025-10-23 23:53:24,214 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2025-10-23 23:53:31,815 - datasets - INFO - TensorFlow version 2.20.0 available.
+2025-10-23 23:53:31,816 - datasets - INFO - JAX version 0.7.2 available.
+2025-10-23 23:53:34,762 - tensorflow - WARNING - From C:\Users\Wizard\AppData\Local\Programs\Python\Python311\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-10-23 23:53:52,480 - RAG_App - INFO - Loading configuration...
+2025-10-23 23:53:52,480 - RAG_App - INFO - Configuration validated successfully.
+2025-10-23 23:53:53,319 - faiss.loader - INFO - Loading faiss with AVX512 support.
+2025-10-23 23:53:53,320 - faiss.loader - INFO - Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+2025-10-23 23:53:53,320 - faiss.loader - INFO - Loading faiss with AVX2 support.
+2025-10-23 23:53:53,335 - faiss.loader - INFO - Successfully loaded faiss with AVX2 support.
+2025-10-23 23:54:00,471 - datasets - INFO - TensorFlow version 2.20.0 available.
+2025-10-23 23:54:00,472 - datasets - INFO - JAX version 0.7.2 available.
+2025-10-23 23:54:03,069 - tensorflow - WARNING - From C:\Users\Wizard\AppData\Local\Programs\Python\Python311\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-10-23 23:54:03,988 - RAG_App - INFO - Initializing RAGEngine…
+2025-10-23 23:54:03,988 - RAG_App - INFO - Initializing ChromaVectorStore at ./chroma_db_store
+2025-10-23 23:54:04,007 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-10-23 23:54:04,062 - RAG_App - INFO - Loading embedding model: sentence-transformers/all-MiniLM-L6-v2
+2025-10-23 23:54:04,082 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cuda:0
+2025-10-23 23:54:04,082 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-10-23 23:54:09,563 - RAG_App - INFO - ChromaVectorStore loaded on initialization.
+2025-10-23 23:54:09,564 - RAG_App - INFO - Vector store loaded successfully.
+2025-10-23 23:54:09,564 - RAG_App - INFO - RAGEngine ready – provider=featherless-ai model=inclusionAI/Ling-1T

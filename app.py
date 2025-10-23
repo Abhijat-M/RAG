@@ -45,21 +45,29 @@ def process_files_background(uploaded_files):
         return len(uploaded_files), len(processed_docs)
     return 0, 0
 
-def crawl_urls_background(urls, context, max_pages, max_depth):
+def crawl_urls_background(urls: list[str], context: str, max_pages: int, max_depth: int, add_to_kb: bool):
     """Background task for crawling URLs."""
     from ingestion.web_crawler import WebCrawler
     
-    logger.info(f"BG_TASK: Starting crawl for {len(urls)} URLs.")
+    logger.info(f"BG_TASK: Starting crawl for {len(urls)} URLs. Add to KB: {add_to_kb}")
     crawler = WebCrawler()
     crawled_content = crawler.crawl_root_urls(urls, context, max_pages, max_depth)
     
-    if crawled_content:
+    pages_crawled = len(crawled_content)
+    pages_added = 0
+
+    if crawled_content and add_to_kb:
         # Re-init RAGEngine in the child process
         rag_engine = RAGEngine() 
         rag_engine.add_documents(crawled_content)
-        logger.info(f"BG_TASK: Crawling complete. Added {len(crawled_content)} pages.")
-        return len(crawled_content)
-    return 0
+        pages_added = len(crawled_content)
+        logger.info(f"BG_TASK: Crawling complete. Added {pages_added} pages to KB.")
+    elif crawled_content:
+        logger.info(f"BG_TASK: Crawling complete. Found {pages_crawled} pages (NOT adding to KB).")
+    else:
+        logger.info("BG_TASK: Crawling complete. No content found.")
+
+    return pages_crawled, pages_added # Return both stats
 
 def build_kg_background():
     """Background task for building the knowledge graph."""
