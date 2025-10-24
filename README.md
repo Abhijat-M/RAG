@@ -105,6 +105,7 @@ flowchart TD
 5. **User Interface:** The Streamlit app provides a clean interface for all interactions, from data ingestion to chat and graph visualization.
 
 ```
+```
 ## 🔧 Setup & Installation
 
 Follow these steps to get the application running locally.
