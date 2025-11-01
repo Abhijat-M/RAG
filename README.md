@@ -105,6 +105,7 @@ flowchart TD
 5. **User Interface:** The Streamlit app provides a clean interface for all interactions, from data ingestion to chat and graph visualization.
 
 ```
+```
 ## 🔧 Setup & Installation
 
 Follow these steps to get the application running locally.
@@ -117,8 +118,8 @@ Follow these steps to get the application running locally.
 ### 2. Clone the Repository
 
 ```bash
-git clone https://your-repository-url.git
-cd intelligent-rag-platform
+git clone https://github.com/Abhijat-M/RAG.git
+cd RAG
 ```
 
 ### 3. Set Up a Virtual Environment
